@@ -9,9 +9,9 @@ class QuestionAnswerCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(pass_context=True, aliases=["ans"])
+    @commands.command(pass_context=True, aliases=["ans", "answer"])
     @commands.has_permissions(manage_messages=True)
-    async def answer(self, ctx, q_id, *, words):
+    async def answer_question(self, ctx, q_id, *, words):
         await ctx.channel.purge()
 
 
